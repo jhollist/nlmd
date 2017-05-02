@@ -1,0 +1,16 @@
+Package: nlmd
+Type: Package
+Title: National Lake Morphometry Dataset
+Version: 0.0.1
+Authors@R: c(person("Jeff","Hollister", role=c("aut","cre"),
+    email=c("jeff.w.hollister@gmail.com","
+    hollister.jeff@epa.gov")),
+    person("William","Milstead",role="ctb",
+    email="milstead.bryan@epa.gov"))
+Maintainer: Jeffrey Hollister <hollister.jeff@epa.gov>
+Description: The purpose of nlmd pakcage is to provide access to lake
+    morphometry data (both the spatial and morphometric data)
+    included in the National Lake Morphometry Dataset.  The data is
+    made available via a web API and an interactive web application.
+    Both are made available via OpenCPU.
+License: CC0
