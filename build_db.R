@@ -9,7 +9,7 @@ if(!file.exists("data/lakemorphometry.zip")){
 if(!dir.exists("data/LakeMorphGdb.gdb/")){
   unzip("data/lakemorphometry.zip",exdir = "data/")
 }
-lyrs <- st_layers("data/LakeMorphGdb.gdb/")$name[1:3]
+lyrs <- st_layers("data/LakeMorphGdb.gdb/")$name
 sf_time <- system.time({
 all_morpho <- assign(lyrs[1],st_read("data/LakeMorphGdb.gdb/",lyrs[1],
                                      stringsAsFactors = FALSE)) %>%
