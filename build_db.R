@@ -23,15 +23,15 @@ for(i in lyrs[-1]){
 }
 
 nla_morpho <- all_morpho %>%
-  filter(!is.na(nlaSITE_ID))
+  filter(nlaSITE_ID != "NA")
 
 lmd <- vector("numeric",nrow(nla_morpho))         
-for(i in seq_along(nla_morpho[,1])){
-  browser()
+for(i in seq_along(nla_morpho$COMID)){
   lk <- as(nla_morpho[i,], "Spatial")
-  el <- get_elev_raster(lk,12,src = "aws")
+  el <- get_elev_raster(lk,9)
   lmc <- lakeSurroundTopo(lk, el) 
   lmd[i] <- lakeMaxDepth(lmc)
+  message(paste0(round(i/nrow(nla_morpho)*100, 3), "%"))
 }
 
 nla_morpho$max_depth_raw <- lmd
