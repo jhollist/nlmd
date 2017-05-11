@@ -14,3 +14,4 @@ Description: The purpose of nlmd pakcage is to provide access to lake
     made available via a web API and an interactive web application.
     Both are made available via OpenCPU.
 License: CC0
+RoxygenNote: 6.0.1
